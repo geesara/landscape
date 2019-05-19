@@ -1,0 +1,38 @@
+*{
+    border: 1px solid red;
+}
+
+#landscape{
+    .sun-moon{
+        width: 500px;
+
+        .sun-side, .moon-side{
+            height: 250px;
+            position: relative;
+        }
+        .sun-side{
+            .sun{
+                position: absolute;
+                top: 10px;
+                left: 230px;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                background-color: yellow;
+                border: none/**/
+            }
+        }
+        .moon-side{
+            .moon{
+                position: absolute;
+                bottom: 20px;
+                left: 220px;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                border: none;/**/
+                box-shadow: 10px 10px 0 #eee;
+            }
+        }
+    }
+}
