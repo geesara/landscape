@@ -68,5 +68,16 @@
   border-radius: 10px;
   background-color: mediumseagreen;
   transform: rotate(36deg) skewY(20deg); }
+#landscape .ground {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden; }
+  #landscape .ground .curve-up {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    height: 50px;
+    background-image: radial-gradient(green 70%, rgba(0, 0, 0, 0) 50%); }
 
 /*# sourceMappingURL=styles.css.map */
