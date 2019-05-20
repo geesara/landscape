@@ -42,6 +42,9 @@
     animation-duration: 200s;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
+    @media (max-width: 1000px) {
+      #landscape .sun-moon {
+        left: 20px; } }
 @keyframes rotate-sun-moon {
   0% {
     transform: rotate(0deg); }
@@ -217,6 +220,9 @@
     transform: rotate(36deg) skewY(20deg);
     bottom: -110px;
     left: 375px; }
+    @media (max-width: 600px) {
+      #landscape .big-mountain {
+        left: 100px; } }
   #landscape .mountain-group {
     position: absolute;
     bottom: 0; }
@@ -243,8 +249,14 @@
       left: 300px; }
   #landscape .mountain-group-1 {
     left: 50px; }
+    @media (max-width: 1000px) {
+      #landscape .mountain-group-1 {
+        left: -20px; } }
   #landscape .mountain-group-2 {
     left: 500px; }
+    @media (max-width: 600px) {
+      #landscape .mountain-group-2 {
+        left: 375px; } }
   #landscape .mountain-group-3 {
     left: 895px; }
   #landscape .ground {

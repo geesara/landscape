@@ -58,6 +58,9 @@
         animation-iteration-count: infinite;
         animation-timing-function: linear;
 
+        @media(max-width: 1000px){
+            left: 20px;
+        }
         @keyframes rotate-sun-moon {
             0%  {
                 transform: rotate(0deg);
@@ -289,6 +292,10 @@
         transform: rotate(36deg) skewY(20deg); 
         bottom: -110px;
         left: 375px;
+
+        @media(max-width: 600px){
+            left: 100px;
+        }
     }
     .mountain-group{
         position: absolute;
@@ -325,9 +332,15 @@
     }
     .mountain-group-1{
         left: 50px;
+        @media(max-width: 1000px){
+            left: -20px;
+        }
     }
     .mountain-group-2{
         left: 500px;
+        @media(max-width: 600px){
+            left: 375px;
+        }
     }
     .mountain-group-3{
         left: 895px;
