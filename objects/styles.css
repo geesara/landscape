@@ -1,83 +1,262 @@
-* {
-  border: 1px solid red; }
-
-#landscape .sun-moon {
-  width: 500px; }
-  #landscape .sun-moon .sun-side, #landscape .sun-moon .moon-side {
-    height: 250px;
-    position: relative; }
-  #landscape .sun-moon .sun-side .sun {
-    position: absolute;
-    top: 10px;
-    left: 230px;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: yellow;
-    border: none; }
-  #landscape .sun-moon .moon-side .moon {
-    position: absolute;
-    bottom: 20px;
-    left: 220px;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    /**/
-    box-shadow: 10px 10px 0 #eee; }
-#landscape .cloud {
-  width: 70px;
-  height: 30px;
-  background-color: blue;
-  position: relative; }
-  #landscape .cloud * {
-    border: none;
-    /**/ }
-  #landscape .cloud .left, #landscape .cloud .middle, #landscape .cloud .right, #landscape .cloud .bottom {
-    background-color: #fff; }
-  #landscape .cloud .left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 12px; }
-  #landscape .cloud .middle {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px; }
-  #landscape .cloud .right {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 12px; }
-  #landscape .cloud .bottom {
-    position: absolute;
-    bottom: 0;
-    width: 70px;
-    height: 20px;
-    border-radius: 12px; }
-#landscape .mountain {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  background-color: mediumseagreen;
-  transform: rotate(36deg) skewY(20deg); }
-#landscape .ground {
+#landscape {
   width: 100%;
-  height: 50px;
+  height: 250px;
   position: relative;
   overflow: hidden; }
-  #landscape .ground .curve-up {
+  #landscape .sky {
     position: absolute;
-    bottom: -25px;
+    background-color: #a9deff;
+    width: 100%;
+    height: 100%;
+    animation-name: sky-color;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+@keyframes sky-color {
+  15% {
+    background-color: #a9deff; }
+  20% {
+    background-color: magenta; }
+  /*25%{
+      background-color: rgb(255, 103, 103);
+  }*/
+  30% {
+    background-color: midnightblue; }
+  70% {
+    background-color: midnightblue; }
+  /*75% {
+      background-color: rgb(255, 103, 103);
+  }*/
+  80% {
+    background-color: magenta; }
+  85% {
+    background-color: #a9deff; }
+  100% {
+    background-color: #a9deff; } }
+  #landscape .sun-moon {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 500px;
+    animation-name: rotate-sun-moon;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+@keyframes rotate-sun-moon {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+    #landscape .sun-moon .sun-side, #landscape .sun-moon .moon-side {
+      height: 250px;
+      position: relative; }
+    #landscape .sun-moon .sun-side .sun {
+      position: absolute;
+      top: 10px;
+      left: 230px;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: yellow;
+      border: none;
+      /**/
+      animation-name: sun-color;
+      animation-duration: 200s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+@keyframes sun-color {
+  15% {
+    background-color: yellow; }
+  25% {
+    background-color: orangered; }
+  30% {
+    background-color: orangered; }
+  75% {
+    background-color: orangered; }
+  85% {
+    background-color: yellow; } }
+    #landscape .sun-moon .moon-side .moon {
+      position: absolute;
+      bottom: 20px;
+      left: 220px;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      /**/
+      box-shadow: 10px 10px 0 #eee; }
+  #landscape .cloud {
+    width: 70px;
+    height: 30px;
+    position: absolute; }
+    #landscape .cloud * {
+      border: none;
+      /**/ }
+    #landscape .cloud .left, #landscape .cloud .middle, #landscape .cloud .right, #landscape .cloud .bottom {
+      background-color: #fff;
+      animation-name: cloud-color;
+      animation-duration: 200s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+@keyframes cloud-color {
+  20% {
+    background-color: #fff; }
+  30% {
+    background-color: #9335ff; }
+  70% {
+    background-color: #9335ff; }
+  80% {
+    background-color: #fff; } }
+    #landscape .cloud .left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 12px; }
+    #landscape .cloud .middle {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px; }
+    #landscape .cloud .right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 12px; }
+    #landscape .cloud .bottom {
+      position: absolute;
+      bottom: 0;
+      width: 70px;
+      height: 20px;
+      border-radius: 12px; }
+  #landscape .cloud-1 {
+    top: 10px;
+    left: -70px;
+    animation-name: cloud-1;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+@keyframes cloud-1 {
+  100% {
+    left: 100%; } }
+  #landscape .cloud-2 {
+    top: 20px;
+    left: -70px;
+    animation-name: cloud-2;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 10s; }
+@keyframes cloud-2 {
+  100% {
+    left: 100%; } }
+  #landscape .cloud-3 {
+    top: 15px;
+    left: -70px;
+    animation-name: cloud-3;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 200s; }
+@keyframes cloud-3 {
+  100% {
+    left: 100%; } }
+  #landscape .cloud-4 {
+    top: 25px;
+    left: -70px;
+    animation-name: cloud-4;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 50s; }
+@keyframes cloud-4 {
+  100% {
+    left: 100%; } }
+  #landscape .cloud-5 {
+    top: 10px;
+    left: -70px;
+    animation-name: cloud-5;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 70s; }
+@keyframes cloud-5 {
+  100% {
+    left: 100%; } }
+  #landscape .mountain {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    transform: rotate(36deg) skewY(20deg);
+    animation-name: mountain-color;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+@keyframes mountain-color {
+  20% {
+    background-color: mediumseagreen; }
+  30% {
+    background-color: #32945e; }
+  70% {
+    background-color: #32945e; }
+  80% {
+    background-color: mediumseagreen; } }
+  #landscape .big-mountain {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    transform: rotate(36deg) skewY(20deg);
+    bottom: -110px;
+    left: 375px; }
+  #landscape .mountain-group {
+    position: absolute;
+    bottom: 0; }
+    #landscape .mountain-group .mountain-1 {
+      bottom: -65px;
+      left: 0px; }
+    #landscape .mountain-group .mountain-2 {
+      bottom: -65px;
+      left: 50px; }
+    #landscape .mountain-group .mountain-3 {
+      bottom: -65px;
+      left: 100px; }
+    #landscape .mountain-group .mountain-4 {
+      bottom: -65px;
+      left: 150px; }
+    #landscape .mountain-group .mountain-5 {
+      bottom: -65px;
+      left: 200px; }
+    #landscape .mountain-group .mountain-6 {
+      bottom: -65px;
+      left: 250px; }
+    #landscape .mountain-group .mountain-7 {
+      bottom: -65px;
+      left: 300px; }
+  #landscape .mountain-group-1 {
+    left: 50px; }
+  #landscape .mountain-group-2 {
+    left: 500px; }
+  #landscape .mountain-group-3 {
+    left: 895px; }
+  #landscape .ground {
     width: 100%;
     height: 50px;
-    background-image: radial-gradient(green 70%, rgba(0, 0, 0, 0) 50%); }
+    position: relative;
+    overflow: hidden; }
+    #landscape .ground .curve-up {
+      position: absolute;
+      bottom: -25px;
+      width: 100%;
+      height: 50px;
+      background-image: radial-gradient(green 70%, rgba(0, 0, 0, 0) 50%); }
 
 /*# sourceMappingURL=styles.css.map */

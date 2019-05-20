@@ -1,11 +1,71 @@
 *{
-    border: 1px solid red;
+    //border: 1px solid red;
 }
 
 #landscape{
-    .sun-moon{
-        width: 500px;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
 
+    .sky{
+        position: absolute;
+        background-color: rgb(169, 222, 255);
+        width: 100%;
+        height: 100%;
+        animation-name: sky-color;
+        animation-duration: 200s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes sky-color {
+            15% {
+                background-color: rgb(169, 222, 255);
+            }
+            20% {
+                background-color: rgb(255, 0, 255);
+            }
+            /*25%{
+                background-color: rgb(255, 103, 103);
+            }*/
+            30%  {
+                background-color: rgb(25, 25, 112);
+            }
+            70%{
+                background-color: rgb(25, 25, 112);
+            }
+            /*75% {
+                background-color: rgb(255, 103, 103);
+            }*/
+            80% {
+                background-color: rgb(255, 0, 255);
+            }
+            85%{
+                background-color: rgb(169, 222, 255);
+            }
+            100%  {
+                background-color: rgb(169, 222, 255);
+            }
+        }
+    }
+    .sun-moon{
+        position: absolute;
+        top: 0;
+        left: 40%;
+        width: 500px;
+        animation-name: rotate-sun-moon;
+        animation-duration: 200s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes rotate-sun-moon {
+            0%  {
+                transform: rotate(0deg);
+            }
+            100%  {
+                transform: rotate(360deg);
+            }
+        }
         .sun-side, .moon-side{
             height: 250px;
             position: relative;
@@ -19,7 +79,29 @@
                 height: 40px;
                 border-radius: 20px;
                 background-color: yellow;
-                border: none/**/
+                border: none;/**/
+                animation-name: sun-color;
+                animation-duration: 200s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
+                @keyframes sun-color {
+                    15%  {
+                        background-color: yellow;
+                    }
+                    25%  {
+                        background-color: orangered;
+                    }
+                    30% {
+                        background-color: orangered;
+                    }
+                    75% {
+                        background-color: orangered;
+                    }
+                    85% {
+                        background-color: yellow;
+                    }
+                }
             }
         }
         .moon-side{
@@ -38,14 +120,32 @@
     .cloud{
         width: 70px;
         height: 30px;
-        background-color: blue;
-        position: relative;
+        position: absolute;
         *{
             border: none;/**/
         }
 
         .left, .middle, .right, .bottom{
             background-color: #fff;
+            animation-name: cloud-color;
+            animation-duration: 200s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes cloud-color {
+                20%  {
+                    background-color: #fff;
+                }
+                30%  {
+                    background-color: rgb(147, 53, 255);
+                }
+                70%{
+                    background-color: rgb(147, 53, 255);
+                }
+                80%{
+                    background-color: #fff;
+                }
+            }
         }
         .left{
             position: absolute;
@@ -79,12 +179,158 @@
             border-radius: 12px;
         }
     }
+    .cloud-1{
+        top: 10px;
+        left: -70px;
+        animation-name: cloud-1;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes cloud-1 {
+            100%  {
+                left: 100%;
+            }
+        }
+    }
+    .cloud-2{
+        top: 20px;
+        left: -70px;
+        animation-name: cloud-2;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 10s;
+
+        @keyframes cloud-2 {
+            100%  {
+                left: 100%;
+            }
+        }
+    }
+    .cloud-3{
+        top: 15px;
+        left: -70px;
+        animation-name: cloud-3;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 200s;
+
+        @keyframes cloud-3 {
+            100%  {
+                left: 100%;
+            }
+        }
+    }
+    .cloud-4{
+        top: 25px;
+        left: -70px;
+        animation-name: cloud-4;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 50s;
+
+        @keyframes cloud-4 {
+            100%  {
+                left: 100%;
+            }
+        }
+    }
+    .cloud-5{
+        top: 10px;
+        left: -70px;
+        animation-name: cloud-5;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 70s;
+
+        @keyframes cloud-5 {
+            100%  {
+                left: 100%;
+            }
+        }
+    }
     .mountain{
+        position: absolute;
         width: 100px;
         height: 100px;
         border-radius: 10px;
         background-color: mediumseagreen;
         transform: rotate(36deg) skewY(20deg); 
+        animation-name: mountain-color;
+        animation-duration: 200s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes mountain-color {
+            20%  {
+                background-color: mediumseagreen;
+            }
+            30%  {
+                background-color: rgb(50, 148, 94);
+            }
+            70%{
+                background-color: rgb(50, 148, 94);
+            }
+            80%{
+                background-color: mediumseagreen;
+            }
+        }
+    }
+    .big-mountain{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        background-color: lightseagreen;
+        transform: rotate(36deg) skewY(20deg); 
+        bottom: -110px;
+        left: 375px;
+    }
+    .mountain-group{
+        position: absolute;
+        bottom: 0;
+
+        .mountain-1{
+            bottom: -65px;
+            left: 0px;
+        }
+        .mountain-2{
+            bottom: -65px;
+            left: 50px;
+        }
+        .mountain-3{
+            bottom: -65px;
+            left: 100px;
+        }
+        .mountain-4{
+            bottom: -65px;
+            left: 150px;
+        }
+        .mountain-5{
+            bottom: -65px;
+            left: 200px;
+        }
+        .mountain-6{
+            bottom: -65px;
+            left: 250px;
+        }
+        .mountain-7{
+            bottom: -65px;
+            left: 300px;
+        }
+    }
+    .mountain-group-1{
+        left: 50px;
+    }
+    .mountain-group-2{
+        left: 500px;
+    }
+    .mountain-group-3{
+        left: 895px;
     }
     .ground{
         width: 100%;
